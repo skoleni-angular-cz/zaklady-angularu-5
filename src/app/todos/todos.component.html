@@ -1,0 +1,20 @@
+<h1 class="mb-3">Todo List</h1>
+
+<div class="d-flex mb-5">
+  <app-my-text-field
+    class="flex-grow-1"
+    [placeholder]="'write a todo...'"
+    (valueChanged)="onTodoNameChange($event)"
+  ></app-my-text-field>
+  <app-my-button
+    [label]="'Add'"
+    (buttonClicked)="onAddTodoButtonClick()"
+  ></app-my-button>
+</div>
+
+<app-todo-item
+  *ngFor="let todoItem of todoItems"
+  [todoItem]="todoItem"
+  (todoCompleted)="onTodoCompleted($event)"
+  (todoRemoved)="onTodoRemove($event)"
+></app-todo-item>

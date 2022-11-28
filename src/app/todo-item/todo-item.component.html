@@ -1,0 +1,16 @@
+<div>
+  <div class="d-flex my-2">
+    <div class="d-inline-block mr-auto flex-grow-1 pt-2">
+      <i
+        *ngIf="todoItem.completed"
+        class="bi bi-check-circle-fill text-success"
+      ></i>
+      <span [class.text-success]="todoItem.completed">
+        {{ todoItem.title }}
+      </span>
+    </div>
+    <app-my-button [label]="'Complete'" (buttonClicked)="onCompleteButtonClicked()"></app-my-button>
+    <app-my-button [label]="'Remove'" (buttonClicked)="onRemoveButtonClicked()"></app-my-button>
+  </div>
+  <hr class="m-0" />
+</div>

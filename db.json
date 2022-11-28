@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "title": "hello world <3 ",
+      "completed": false,
+      "id": 1
+    },
+    {
+      "title": "coool",
+      "completed": false,
+      "id": 2
+    },
+    {
+      "title": "yaay",
+      "completed": false,
+      "id": 3
+    }
+  ]
+}

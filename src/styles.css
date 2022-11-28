@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+p {
+  font-family: Lato;
+}
+
+input[required] {
+  background-color: beige;
+}
+
+input.ng-touched.ng-invalid {
+  background-color: coral;
+}

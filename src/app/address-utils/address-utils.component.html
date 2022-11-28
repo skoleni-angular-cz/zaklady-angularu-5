@@ -1,0 +1,19 @@
+<label for="street">Ulice</label>
+<input type="text" id="street" class="form-control" [(ngModel)]="street"/>
+<label for="houseNumber">Číslo popisné</label>
+<input type="text" id="houseNumber" class="form-control" [(ngModel)]="houseNumber" required/>
+<label for="orientationNumber">Číslo orientační</label>
+<input type="text" id="orientationNumber" class="form-control" [(ngModel)]="orientationNumber"/>
+<hr>
+<label for="postalCode">PSČ</label>
+<input type="text" id="postalCode" class="form-control" [(ngModel)]="postalCode" required/>
+<label for="city">Město</label>
+<input type="text" id="city" class="form-control" [(ngModel)]="city" required/>
+<label for="district">Čtvrť</label>
+<input type="text" id="district" class="form-control" [(ngModel)]="district"/>
+<div class="mt-3">
+  <button class="btn btn-success" (click)="formatAddress()">Naformátovat</button>
+</div>
+<div *ngIf="result">
+  Výsledek: {{ result }}
+</div>

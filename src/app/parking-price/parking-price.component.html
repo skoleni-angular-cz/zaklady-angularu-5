@@ -1,0 +1,13 @@
+<label for="duration">Doba parkování (h)</label>
+<input type="number" id="duration" class="form-control" [(ngModel)]="duration"/>
+<label for="duration">Datum parkování</label>
+<input type="date" id="date" class="form-control" [(ngModel)]="date"/>
+
+<div class="flex mt-3">
+  <button class="btn btn-success" (click)="calculateParkingPrice()">Zjistit cenu</button>
+  <div class="h3 ms-auto">
+    <ng-container *ngIf="resultPrice !== undefined">
+      Cena: {{ resultPrice }} Kč
+    </ng-container>
+  </div>
+</div>
