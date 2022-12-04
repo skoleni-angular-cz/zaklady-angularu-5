@@ -9,7 +9,7 @@ describe('FileSizePipe', () => {
   });
 
   it('just trying how to test a pipe', () => {
-    // todo
+    expect(pipe.transform(1024)).toEqual('1 kB');
   });
 
 });
