@@ -35,7 +35,13 @@ export function formatZipAndCity(address: CzechAddressDto | undefined) {
     return '';
   }
   else {
-    return `${address.postalCode} ${address.city}`;
+    let zipAndCity = `${address.postalCode} ${address.city}`;
+
+    if (address.district) {
+      zipAndCity += ` - ${address.district}`;
+    }
+
+    return zipAndCity;
   }
 }
 
